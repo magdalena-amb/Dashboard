@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Dashboard</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="row fixed"><!--fixed nav-->
+        <div class='col-2 brand' >
+          <a href='#'>Just do it</a>
+          <a id='sidebar-toggler' href='#'><i class="fas fa-bars"></i>
+          </a>    
+        </div><!--end col-2 brand-->
+        <div class="col-10 nav-right"><!--nav-right hidden on mobile-->
+          <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-wallet"></i></button><p><i class="fas fa-dollar-sign"></i>1,500.00</p><button class='button'><i class="fas fa-chevron-down"></i></button></a>
+          </div>
+          <div class='nav-link'><a href="#"><button class='button button-relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a>
+          </div>
+          <div class='nav-link'><a href="#"><button class='button'><i class="far fa-user-circle"></i></button><span>Leonardo Dicaprio</span></a>
+          </div>
+          <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-external-link-alt"></i></button></a>
+          </div>
+        </div><!--end of col-10 nav-right-->
+      </nav><!--end of fixed nav-->
+    <div class="row">
+      <div id='sidebar' class="col-2 sidebar display"><!--sidebar-->
+        <div class="sidebar-link"><a href='#general'><button class='button'><i class="far fa-star"></i></button><span>General</span></a>
+        </div>
+        <div class="sidebar-link"><a href='#'><button class='button'>
+        <i class="fas fa-stream"></i></button><span>Details</span></a></div>
+        <div class="sidebar-link"><a href='#links'><button class='button'><i class="fas fa-link"></i></button><span>Links</span></a></div>
+        <div class="sidebar-link"><a href='#'><button class='button'><i class="fas fa-table"></i></button><span>Banners</span></a></div>
+        <div class="sidebar-link"><a href='#'><button class='button'><i class="far fa-user"></i></button><span>Personal data</span></a></div>
+        <div class="sidebar-link"><a href='#'><button class='button'><i class="fas fa-dollar-sign"></i></button><span>Payout</span></a></div>
+        <div class="sidebar-link"><a href='#'><button class='button'><i class="fas fa-reply"></i></button><span>Postback</span></a></div>
+        <div class="messenger"><!--messenger-->
+            <div class="user">
+              <div class="title">Your Manager</div>
+              <div class="round-picture"><div class="dot green"></div></div>
+              <span>Mikhael E.</span>
+            </div>
+        </div><!--end of messenger-->
+        <!--nav-right links displayed on mobile only-->
+        <div class="sidebar-link hide-show"><a href="#"><button class='button'><i class="fas fa-wallet"></i></button><span><i class="fas fa-dollar-sign"></i>1,500.00</span><button class='button'><i class="fas fa-chevron-down"></i></button></a></div>
+        <div class="sidebar-link hide-show"><a href="#"><button class='button button-relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a></div>
+        <div class="sidebar-link hide-show"><a href="#"><button class='button'><i class="far fa-user-circle"></i></button><span>Leonardo Dicaprio</span></a></div>
+        <div class="sidebar-link hide-show"><a href="#"><button class='button'><i class="fas fa-external-link-alt"></i></button></a></div>
+      </div> <!--end sidebar-->
+      <main class="col-10 main-content">
+        <section id="general">
+          <div class=" title">General Statistic</div>
+          <div class="row inner-section">
+              <form class="flex" action="submit">
+                <div class="input-wrapper">
+                    <input type="date" id="start" name="start"
+                    value="14-05-2019" min="2019-01-01" max="2019-12-31">
+                    <input type="date" id="end" name="end"
+                    value="14-05-2019"
+                    min="2019-01-01" max="2019-12-31">
+                    <button class="button button-sm"><i class="far fa-calendar-alt"></i></button>
+                </div>
+                <button class="button button-sm orange" type='submit'><a href='#'><i class="fas fa-redo"></i></a></button>         
+              </form>  
+            </div><!--end inner-section-->
+            <div class="section-column row"><!--section-column-->
+              <ul class='col-1'>
+                <li><span>Visit Signups</span><span>124</span></li>
+                <li><span>FTD</span><span>445</span></li>
+              </ul>
+              <ul class='col-1'>
+                <li><span>Net deposit</span><span>564</span></li>
+                <li><span>Turn over</span><span>432</span></li>
+              </ul>
+            </div><!--end section-column-->
+            <div class="section-column scroll-wrapper">
+              <img src="./images/bar-diagram.png"
+                  alt="bar" class="responsive"/>
+            </div>
+        </section><!--end of section-->
+        <section id="links">
+          <div class=" title">Links</div>
+          <div class=" row inner-section">
+            <div class='flex'>
+                <button class="button orange add-new"><i class="fas fa-plus"></i>add new</button>
+            </div> 
+          </div>
+          <div class="section-column"><!--section-column-->
+            <ul class="row">
+                <a href="#" class="col-1 flex">
+                    <li class="col-1 flex">
+                      <div class="col-5">Home page</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.homepage.com</span>
+                        <span class="hover">
+                              <button class='button button-sm'><i class="fas fa-link"></i></button>
+                              <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Currently offer</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.currently.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Blurpix</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.blurpix.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Your Site</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.yoursite.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Google</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.google.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Facebook</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.facebook.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Dashboard</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.dashboard.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Blurax</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.blurax.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Piece Of Wine</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.pieceofwine.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+                  <a href="#" class="col-1 flex ">
+                    <li class="col-1 flex">
+                      <div class="col-5">Twitter</div>
+                      <div class="col-7 space-between">
+                        <span>http://www.twitter.com</span>
+                        <span class="hover">
+                            <button class='button button-sm'><i class="fas fa-link"></i></button>
+                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
+                        </span>
+                      </div>
+                    </li>
+                  </a>
+            </ul>
+          </div><!--end section-column-->
+          
+        </section>
+                    
+      </main><!--end of main-->
+    </div> 
+  </div>
+  <script src='js/script.js'></script>
+</body>
+</html>
