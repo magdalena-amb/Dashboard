@@ -20,7 +20,7 @@
         <div class="col-10 nav-right"><!--nav-right hidden on mobile-->
           <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-wallet"></i></button><p><i class="fas fa-dollar-sign"></i>1,500.00</p><button class='button'><i class="fas fa-chevron-down"></i></button></a>
           </div>
-          <div class='nav-link'><a href="#"><button class='button button-relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a>
+          <div id="alert" class='nav-link'><a href="#"><button class='button button-relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a>
           </div>
           <div class='nav-link'><a href="#"><button class='button'><i class="far fa-user-circle"></i></button><span>Leonardo Dicaprio</span></a>
           </div>
@@ -78,9 +78,8 @@
                 <li><span>Turn over</span><span>432</span></li>
               </ul>
             </div><!--end section-column-->
-            <div class="section-column scroll-wrapper">
-              <img src="./images/bar-diagram.png"
-                  alt="bar" class="responsive"/>
+            <div class="section-column">
+              <canvas id="myChart"></canvas>      
             </div>
         </section><!--end of section-->
         <section id="links">
@@ -220,6 +219,18 @@
       </main><!--end of main-->
     </div> 
   </div>
+    <!--Modal-->
+    <div class="overlay" id="overlay">
+      <div class="modal" id="myModal">
+        <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
+    
+        <h4>Witaj w modalu!</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque, porro quisquam nemo pariatur quod totam ex odio voluptates repellendus, perferendis excepturi. Maiores culpa nulla corrupti dicta consectetur animi odit.</p>
+    
+        <button class=" button green js--close-modal">OK</button>
+      </div>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src='js/script.js'></script>
 </body>
 </html>
