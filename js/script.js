@@ -9,6 +9,7 @@ var sidebarToggler= document.getElementById('sidebar-toggler');
 var dateControl = document.querySelectorAll('input[type="date"]');
   Array.from(dateControl).forEach(function(element){ 
   element.value = '2019-05-14'
+  });
 
   //Wyświetlanie dzisiejszej daty domyślnie w input[type='date'] //
   //jaki jest sposób, bo tutaj :
@@ -21,5 +22,6 @@ var dateControl = document.querySelectorAll('input[type="date"]');
   //        if(Year <= 99)    Year += 1900
   //     return `${Day}.${Month}.${Year}`;
   //   }
-  // element.value = today();
-    });
+  // Array.from(dateControl).forEach(function(element){ 
+  //   element.value= today();
+  // });
