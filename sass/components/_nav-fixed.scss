@@ -1,0 +1,15 @@
+
+.nav-fixed{
+  position: fixed;
+  top: 0;
+  right: 1%;
+  left: 1%;
+  z-index: 1;
+}
+// mobile //
+@media (max-width: 767px){
+  .nav-fixed{
+    right: 0;
+    left: 0;
+  }
+}

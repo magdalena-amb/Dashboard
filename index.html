@@ -10,228 +10,254 @@
   <title>Dashboard</title>
 </head>
 <body>
-  <div class="container">
-    <nav class="row fixed"><!--fixed nav-->
-        <div class='col-2 brand' >
-          <a href='#'>Just do it</a>
-          <a id='sidebar-toggler' href='#'><i class="fas fa-bars"></i>
-          </a>    
-        </div><!--end col-2 brand-->
-        <div class="col-10 nav-right"><!--nav-right hidden on mobile-->
-          <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-wallet"></i></button><p><i class="fas fa-dollar-sign"></i>1,500.00</p><button class='button'><i class="fas fa-chevron-down"></i></button></a>
-          </div>
-          <div id="alert" class='nav-link'><a href="#"><button class='button button-relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a>
-          </div>
-          <div class='nav-link'><a href="#"><button class='button'><i class="far fa-user-circle"></i></button><span>Leonardo Dicaprio</span></a>
-          </div>
-          <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-external-link-alt"></i></button></a>
-          </div>
-        </div><!--end of col-10 nav-right-->
-      </nav><!--end of fixed nav-->
-    <div class="row">
-      <div id='sidebar' class="col-2 sidebar display"><!--sidebar-->
-        <div class="sidebar-link"><a href='#general'><button class='button'><i class="far fa-star"></i></button><span>General</span></a>
-        </div>
-        <div class="sidebar-link"><a href='#'><button class='button'>
-        <i class="fas fa-stream"></i></button><span>Details</span></a></div>
-        <div class="sidebar-link"><a href='#links'><button class='button'><i class="fas fa-link"></i></button><span>Links</span></a></div>
-        <div class="sidebar-link"><a href='#'><button class='button'><i class="fas fa-table"></i></button><span>Banners</span></a></div>
-        <div class="sidebar-link"><a href='#'><button class='button'><i class="far fa-user"></i></button><span>Personal data</span></a></div>
-        <div class="sidebar-link"><a href='#'><button class='button'><i class="fas fa-dollar-sign"></i></button><span>Payout</span></a></div>
-        <div class="sidebar-link"><a href='#'><button class='button'><i class="fas fa-reply"></i></button><span>Postback</span></a></div>
-        <div class="messenger"><!--messenger-->
-            <div class="user">
-              <div class="title">Your Manager</div>
-              <div class="round-picture"><div class="dot green"></div></div>
-              <span>Mikhael E.</span>
-            </div>
-        </div><!--end of messenger-->
-        <!--nav-right links displayed on mobile only-->
-        <div class="sidebar-link hide-show"><a href="#"><button class='button'><i class="fas fa-wallet"></i></button><span><i class="fas fa-dollar-sign"></i>1,500.00</span><button class='button'><i class="fas fa-chevron-down"></i></button></a></div>
-        <div class="sidebar-link hide-show"><a href="#"><button class='button button-relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a></div>
-        <div class="sidebar-link hide-show"><a href="#"><button class='button'><i class="far fa-user-circle"></i></button><span>Leonardo Dicaprio</span></a></div>
-        <div class="sidebar-link hide-show"><a href="#"><button class='button'><i class="fas fa-external-link-alt"></i></button></a></div>
-      </div> <!--end sidebar-->
-      <main class="col-10 main-content">
-        <section id="general">
-          <div class=" title">General Statistic</div>
-          <div class="row inner-section">
-              <form class="flex" action="submit">
-                <div class="input-wrapper">
-                    <input type="date" id="start" name="start"
-                    min="2019-01-01" max="2019-12-31">
-                    <input type="date" id="end" name="end"
-                  
-                    min="2019-01-01" max="2019-12-31">
-                    <button class="button button-sm"><i class="far fa-calendar-alt"></i></button>
-                </div>
-                <button class="button button-sm orange" type='submit'><a href='#'><i class="fas fa-redo"></i></a></button>         
-              </form>  
-            </div><!--end inner-section-->
-            <div class="section-column row"><!--section-column-->
-              <ul class='col-1'>
-                <li><span>Visit Signups</span><span>124</span></li>
-                <li><span>FTD</span><span>445</span></li>
-              </ul>
-              <ul class='col-1'>
-                <li><span>Net deposit</span><span>564</span></li>
-                <li><span>Turn over</span><span>432</span></li>
-              </ul>
-            </div><!--end section-column-->
-            <div class="section-column">
-              <canvas id="myChart"></canvas>      
-            </div>
-        </section><!--end of section-->
-        <section id="links">
-          <div class=" title">Links</div>
-          <div class=" row inner-section">
-            <div class='flex'>
-                <button class="button orange add-new"><i class="fas fa-plus"></i>add new</button>
-            </div> 
-          </div>
-          <div class="section-column"><!--section-column-->
-            <ul class="row">
-                <a href="#" class="col-1 flex">
-                    <li class="col-1 flex">
-                      <div class="col-5">Home page</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.homepage.com</span>
-                        <span class="hover">
-                              <button class='button button-sm'><i class="fas fa-link"></i></button>
-                              <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
+    <div class="container">
+        <nav class="nav-fixed">
+          <div class="row">
+            <div class="col-2">
+                <div class='brand'>
+                    <a href='#'>Just do it</a>
+                    <a id='sidebar-toggler' href='#'><i class="fas fa-bars"></i>
+                    </a>    
+                </div><!--end brand-->
+                <div id='sidebar' class="sidebar display"><!--sidebar-->
+                  <div class="sidebar-link"><a href='#general'><span><i class="far fa-star"></i></span><span>General</span></a>
+                  </div>
+                  <div class="sidebar-link"><a href='#'><span><i class="fas fa-stream"></i></span>
+                  <span>Details</span></a></div>
+                  <div class="sidebar-link"><a href='#links'><span><i class="fas fa-link"></i></span><span>Links</span></a></div>
+                  <div class="sidebar-link"><a href='#'><span><i class="fas fa-table"></i></span><span>Banners</span></a></div>
+                  <div class="sidebar-link"><a href='#'><span><i class="far fa-user"></i></span><span>Personal data</span></a></div>
+                  <div class="sidebar-link"><a href='#'><span><i class="fas fa-dollar-sign"></i></span><span>Payout</span></a></div>
+                  <div class="sidebar-link"><a href='#'><span><i class="fas fa-reply"></i></span><span>Postback</span></a></div>
+                  <!--nav-right links displayed on mobile only-->
+                    <div class="sidebar-link hide-show"><a href="#"><span><i class="far fa-user-circle"></i></span><span>Leonardo Dicaprio</span></a></div>
+                    <div class="sidebar-link hide-show"><a href="#"><span><i class="fas fa-wallet"></i></span><span><i class="fas fa-dollar-sign"></i>1,500.00</span><button class='button'><i class="fas fa-chevron-down"></i></button></a></div>
+                    <div class="sidebar-link hide-show"><a href="#"><button class='button relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a></div>
+                    <div class="sidebar-link hide-show"><a href="#"><span><i class="fas fa-external-link-alt"></i></span></a></div> 
+                  <!--end nav-right links-->
+                  <div class="messenger"><!--messenger-->
+                    <div class="user">
+                      <div class="title">Your Manager</div>
+                      <div class="round-picture"><div class="dot green"></div></div>
+                      <span>Mikhael E.</span>
+                    </div>
+                  </div><!--end of messenger-->   
+               </div><!--end sidebar-->
+            </div><!--end col-2-->
+            <div class="col-10">
+                  <div class="nav-right"><!--nav-right hidden on mobile-->
+                    <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-wallet"></i></button><p><i class="fas fa-dollar-sign"></i>1,500.00</p><button class='button'><i class="fas fa-chevron-down"></i></button></a>
+                    </div>
+                    <div id="alert" class='nav-link'><a href="#"><button class='button relative'><i class="far fa-bell"></i><div class="dot orange dot-sm"></div></button></a>
+                    </div>
+                    <div class='nav-link'><a href="#"><button class='button'><i class="far fa-user-circle"></i></button><span>Leonardo Dicaprio</span></a>
+                    </div>
+                    <div class='nav-link'><a href="#"><button class='button'><i class="fas fa-external-link-alt"></i></button></a>
+                    </div>
+                  </div><!--end of nav-right-->
+              </div><!--end col-10-->
+          </div><!--end row-->  
+        </nav>
+        <div class="row">
+          <div id="grid-gap" class="col-2 grid-gap"></div>
+          <div class="col-10">
+              <main class="main"><!--main-->
+                  <section class="main-section" id="general">
+                    <div class="main-section-title">General Statistic</div>
+                    <div class="main-inner-section">
+                        <form class="flex" action="submit">
+                          <div class="input-wrapper">
+                              <input type="date" id="start" name="start"
+                                min="2019-01-01" max="2019-12-31">
+                              <input type="date" id="end" name="end"
+                                min="2019-01-01" max="2019-12-31">
+                              <button class="button button-sm"><i class="far fa-calendar-alt"></i></button>
+                          </div>
+                          <button class="button button-sm orange" type='submit'><a href='#'><i class="fas fa-redo"></i></a></button>         
+                        </form>  
+                    </div><!--end inner-section-->
+                      <div class="main-section-column"><!--section-column-->
+                        <div class="row">
+                            <ul class='col-1'>
+                                <li>
+                                  <a href="#"><span>Visit Signups</span><span>124</span>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#"><span>FTD</span><span>445</span>
+                                  </a>
+                                </li>
+                              </ul>
+                            <ul class='col-1'>
+                                <li>
+                                  <a href="#"><span>Net deposit</span><span>564</span>
+                                  </a>
+                                </li>
+                                <li>
+                                    <a href="#"><span>Turn over</span><span>432</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!--end row--> 
+                      </div><!--end main-section-column-->
+                      <div class="main-section-column">
+                        <canvas id="myChart"></canvas>      
                       </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Currently offer</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.currently.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
+                  </section><!--end of section #general-->
+                  <section id="links" class="main-section"><!--section #links-->
+                    <div class="main-section-title">Links</div>
+                    <div class="main-inner-section">
+                          <button class="button button-lg orange"><i class="fas fa-plus"></i>add new</button> 
+                    </div>
+                    <div class="main-section-column"><!--main-section-column-->
+                      <div class="row">
+                        <ul class="col-1">
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Home page</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.homepage.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Currently offer</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.currently.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li> 
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Blurpix</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.blurpix.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>  
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Your Site</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.yoursite.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>  
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Google</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.google.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Facebook</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.facebook.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li> 
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Dashboard</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.dashboard.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Blurax</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.blurax.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Piece of Wine</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.pieceofwine.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <div class="col-5">Twitter</div>
+                                  <div class="col-7 flex">
+                                    <div class="http-link">http://www.twitter.com</div>
+                                    <div class="hover">
+                                          <span><i class="fas fa-link"></i></span>
+                                          <span><i class="far fa-trash-alt"></i></span>
+                                    </div>
+                                  </div>  
+                            </a>
+                          </li>   
+                      </ul>
                       </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Blurpix</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.blurpix.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Your Site</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.yoursite.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Google</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.google.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Facebook</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.facebook.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Dashboard</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.dashboard.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Blurax</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.blurax.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Piece Of Wine</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.pieceofwine.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-                  <a href="#" class="col-1 flex ">
-                    <li class="col-1 flex">
-                      <div class="col-5">Twitter</div>
-                      <div class="col-7 space-between">
-                        <span>http://www.twitter.com</span>
-                        <span class="hover">
-                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                        </span>
-                      </div>
-                    </li>
-                  </a>
-            </ul>
-          </div><!--end section-column-->
-          
-        </section>
-                    
-      </main><!--end of main-->
-    </div> 
-  </div>
+                          
+                          <div class="main-inner-section">
+                              <button class="button button-lg orange"><i class="fas fa-plus"></i>add new</button> 
+                        </div>
+                      </div><!--end main-section-column-->
+                  </section><!--end of section #links-->
+              </main><!--end main-->    
+          </div><!--end col-10-->
+        </div><!--end row-->          
+    </div><!--end container-->
 
     <!--Modal-->
     <div class="overlay" id="overlay">
-      <div class="modal" id="myModal">
-        <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
-    
-        <h4>Witaj w modalu!</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque, porro quisquam nemo pariatur quod totam ex odio voluptates repellendus, perferendis excepturi. Maiores culpa nulla corrupti dicta consectetur animi odit.</p>
-    
-        <button class=" button green js--close-modal">OK</button>
-      </div>
-    </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-  <script src='js/script.js'></script>
-</body>
-</html>
+        <div class="modal" id="myModal">
+          <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
+      
+          <h4>Witaj w modalu!</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque, porro quisquam nemo pariatur quod totam ex odio voluptates repellendus, perferendis excepturi. Maiores culpa nulla corrupti dicta consectetur animi odit.</p>
+      
+          <button class=" button green js--close-modal">OK</button>
+        </div>
+      </div><!--end Modal-->   
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>  
+      <script src='js/script.js'></script>    
+    </body>
+    </html>
+         

@@ -11,6 +11,98 @@
 <body>
   <div class="container">
       <div class="row">
+        <div class="col-2">
+            <div class='brand'>
+                <a href='#'>Just do it</a>
+                <a id='sidebar-toggler' href='#'><i class="fas fa-bars"></i>
+                </a>    
+            </div><!--end brand-->
+          </div>
+        </div><!--end row--> 
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-2">
+            <!--sidebar-->
+            <div id='sidebar' class="sidebar display"></div>
+            <!--sidebar-link-->
+            <div class="sidebar-link"><a href='#general'><span><i class="far fa-star"></i></span><span>General</span></a>
+            </div>
+            <div class="sidebar-link"><a href='#'><span>
+            <i class="fas fa-stream"></i></span><span>Details</span></a></div>
+          </div>
+          <div class="col-10"></div>
+        </div> 
+        <br>
+        <br>
+      <div class="row">
+        <div class="col-10">
+            <main class="main"><!--main-->
+                  <section class="main-section" id="general">
+                      <div class="main-section-title">General Statistic</div>
+                      <div class="main-inner-section">
+                          <form class="flex" action="submit">
+                            <div class="input-wrapper">
+                                <input type="date" id="start" name="start"
+                                  min="2019-01-01" max="2019-12-31">
+                                <input type="date" id="end" name="end"
+                                  min="2019-01-01" max="2019-12-31">
+                                <button class="button button-sm"><i class="far fa-calendar-alt"></i></button>
+                            </div>
+                            <button class="button button-sm orange" type='submit'><a href='#'><i class="fas fa-redo"></i></a></button>         
+                          </form>  
+                      </div><!--end inner-section-->
+                        <div class="main-section-column"><!--section-column-->
+                          <div class="row">
+                              <ul class='col-1'>
+                                  <li>
+                                    <a href="#"><span>Visit Signups</span><span>124</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a href="#"><span>FTD</span><span>445</span>
+                                    </a>
+                                  </li>
+                                </ul>
+                              <ul class='col-1'>
+                                  <li>
+                                    <a href="#"><span>Net deposit</span><span>564</span>
+                                    </a>
+                                  </li>
+                                  <li>
+                                      <a href="#"><span>Turn over</span><span>432</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                          </div><!--end row--> 
+                        </div><!--end main-section-column--> 
+                    </section><!--end of section #general--> 
+              </div>
+              <br>
+              <br>
+            </main>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-10">
+          <main class="main">
+              <div class="row">
+                  <div class="col-10">
+                      <section id="links" class="main-section"><!--section #links-->
+                        <div class="main-section-title">Links</div>
+                        <div class="main-inner-section">
+                              <button class="button button-lg orange"><i class="fas fa-plus"></i>add new</button> 
+                        </div>
+                      </section>
+                  </div>
+          </main>
+        </div>
+      </div>
+    </div><!--end container--> 
+      <br>
+      <br>
+      <br>
+      <div class="row">
           <div class="col-1">
             <!--buttons and colors-->
             <button class="button green"></button>
@@ -18,112 +110,10 @@
             <button class="button blue"></button>
             <button class="button button-sm green"></button>
             <button class="button button-sm orange"></button>
-            <button class="button button-sm blue"><i class="fas fa-external-link-alt"></i></button>
-            <button class="button button-sm orange "><i class="fas fa-plus"></i></button>
+            <button class="button button-lg orange"><i class="fas fa-plus"></i>add new</button>
             <br>
-            <button class="button orange add-new"><i class="fas fa-plus"></i>add new</button>
-            <br>
-            <!--sidebar link-->
-            <div class="sidebar-link"><a href='#'><button class='button'>
-              <i class="fas fa-stream"></i></button><span>Sidebar-link<span><a>
-              </div>
-            <br>
-            <!--main-content-->
-            <div class="main-content">
-                <section>
-                  <!--title-->
-                    <div class=" title">General Statistic</div>
-                </section>
-            </div>    
-            <br>
-            <div class="main-content">
-                <section>
-                  <div class="row inner-section">
-                      <form class="flex" action="submit">
-                        <div class="input-wrapper">
-                            <input type="date" id="start" name="start"
-                            min="2019-01-01" max="2019-12-31">
-                            <input type="date" id="end" name="end"
-                            min="2019-01-01" max="2019-12-31">
-                            <button class="button"><i class="far fa-calendar-alt"></i></button>
-                        </div>
-                        <button class="button orange" type='submit'><a href='#'><i class="fas fa-redo"></i></a></button>          
-                      </form>  
-                    </div>  
-                </section>
-                <section>
-                    <div class="section-column row"><!--section-column-->
-                      <ul class='col-1'>
-                        <li><span>Visit Signups</span><span>124</span></li>
-                        <li><span>FTD</span><span>445</span></li>
-                      </ul>
-                      <ul class='col-1'>
-                        <li><span>Net deposit</span><span>564</span></li>
-                        <li><span>Turn over</span><span>432</span></li>
-                      </ul>
-                    </div><!--end section-column-->
-                    <div class="section-column scroll-wrapper">
-                      <img src="./images/bar-diagram.png"
-                          alt="bar" class="responsive"/>
-                    </div>
-                  
-                  
-                </section>
-                
             
-                </div>
-                <br>
-                <br>
-                <div class="main-content">
-                    <section id="links">
-                        <div class=" title">Links</div>
-                        <div class=" row inner-section">
-                          <div class='flex'>
-                              <button class="button orange add-new"><i class="fas fa-plus"></i>add new</button>
-                          </div> 
-                        </div>
-                    </section>
-                </div> 
-                <div class="main-content">
-                    <section id="links">
-                        <div class=" title">Links</div>
-                        <div class=" row inner-section">
-                          <div class='flex'>
-                              <button class="button orange add-new"><i class="fas fa-plus"></i>add new</button>
-                          </div> 
-                        </div>
-                        <div class="section-column"><!--section-column-->
-                          <ul class="row">
-                              <a href="#" class="col-1 flex">
-                                  <li class="col-1 flex">
-                                    <div class="col-5">Home page</div>
-                                    <div class="col-7 space-between">
-                                      <span>http://www.homepage.com</span>
-                                      <span class="hover">
-                                            <button class='button button-sm'><i class="fas fa-link"></i></button>
-                                            <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                                      </span>
-                                    </div>
-                                  </li>
-                                </a>
-                                <a href="#" class="col-1 flex ">
-                                    <li class="col-1 flex">
-                                      <div class="col-5">Currently offer</div>
-                                      <div class="col-7 space-between">
-                                        <span>http://www.currently.com</span>
-                                        <span class="hover">
-                                              <button class='button button-sm'><i class="fas fa-link"></i></button>
-                                              <button class='button button-sm'><i class="far fa-trash-alt"></i></button>
-                                        </span>
-                                      </div>
-                                    </li>
-                                  </a>
-                          </ul>
-                        </div><!--end section-column-->
-                        
-                      </section>
-                    </div>    
-              <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
               <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
               <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
               <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
@@ -142,23 +132,13 @@
                 <li>Lorem ipsum dolor <strong>sit amet</strong>, consectetur <a href="#">consectetur adipiscing elit.</a>.</li>
               </ol>
           </div>
-        </div><br>     
-  </div>
-  <br>
+        </div>
+        <br>     
+        <br>
 
-  <!--Modal-->
-  <div class="overlay" id="overlay">
-    <div class="modal" id="myModal">
-      <div class="btn-close js--close-modal"><i class="fas fa-times"></i></div>
-  
-      <h4>Witaj w modalu!</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus itaque, porro quisquam nemo pariatur quod totam ex odio voluptates repellendus, perferendis excepturi. Maiores culpa nulla corrupti dicta consectetur animi odit.</p>
-  
-      <button class=" button green js--close-modal">OK</button>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>   
-  <script src='js/script.js'></script>   
-  
-</body>
-</html>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>  
+        <script src='js/script.js'></script>    
+      </body>
+      </html>
+
+    

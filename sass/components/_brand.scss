@@ -1,0 +1,32 @@
+
+.brand {
+  display: flex;
+  justify-content: space-between;
+  min-width: 200px;
+  height: 60px;
+  line-height: 60px;
+  background-color: $sidebar-color;
+  &:hover{
+    background-color: $sidebar-hover;
+    color:#fff;
+    }
+  a{
+    display: inline-block;
+    flex-basis: content;
+    font-family: $brand-font;
+    font-size:$brand-font-size;
+    color: $brand-color;
+    padding-left: 15px;
+    padding-right: 15px;
+    i{
+      font-size: 20px;
+    }
+  }  
+}
+// mobile //
+@media (max-width: 767px){
+  .brand{
+    height: 50px;
+    line-height: 50px;
+  }
+}

@@ -1,7 +1,9 @@
 var sidebarToggler= document.getElementById('sidebar-toggler');
   var sidebar = document.getElementById('sidebar');
+  var gridGap = document.getElementById('grid-gap');
   function toggle(){
     sidebar.classList.toggle('hide-show');
+    gridGap.classList.toggle('hide-show');
     sidebar.classList.toggle('display');
   }
   sidebarToggler.addEventListener('click', toggle);

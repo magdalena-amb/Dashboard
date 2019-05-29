@@ -1,0 +1,46 @@
+.flex{
+  display: flex;
+  justify-content: space-between;
+  .input-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid $main-border-color;
+    border-radius: 4px;
+    margin-right: 15px;
+    input[type="date"] {
+      padding-left:15px;
+      padding-right: 15px;
+      font-size: 14px;
+      background-color: #fafafa;
+      border: none;
+      color: $main-text-color;
+      outline: none;
+      &:hover{
+        color: #000;
+      }
+    } 
+    input:first-child:after{  // Jak to powiększyć?
+      content:'|';
+      color: $main-bgd-color;
+    }
+    .button{
+      i{
+        color: $main-text-color;
+      }
+      &:hover{
+        background-color:$main-bgd-hover;
+        i{
+          color: #000;
+        }
+      }
+    } 
+    
+    &:hover{
+      .button{ 
+        background-color: $main-bgd-hover;
+        color: #000;
+      }
+    }
+  }
+} 
+

@@ -1,0 +1,30 @@
+.sidebar-link{
+  height: 50px;
+  line-height: 50px;
+  padding-right: 15px;
+  transition: .3s;
+  a{
+    display: inline-block;
+    span{
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+  &:hover {
+    background-color:$sidebar-hover;
+    border-left: 3px solid $green; 
+    i, span{
+      color: #fff;
+    }
+    .button {
+     color: #fff;
+    }
+  }
+}
+// mobile //
+@media (max-width: 767px){
+  .sidebar-link{
+    height: 40px;
+    line-height: 40px;
+  }
+}
