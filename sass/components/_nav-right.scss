@@ -1,4 +1,8 @@
 .nav-right{
+  position: fixed;
+  top: 0;
+  right: 1%;
+  width:79%;
   display: flex;
   justify-content: flex-end;
   height: 60px;

@@ -1,10 +1,12 @@
 var sidebarToggler= document.getElementById('sidebar-toggler');
   var sidebar = document.getElementById('sidebar');
   var gridGap = document.getElementById('grid-gap');
+  var mainContent =document.getElementById('main');
   function toggle(){
     sidebar.classList.toggle('hide-show');
     gridGap.classList.toggle('hide-show');
     sidebar.classList.toggle('display');
+    mainContent.classList.toggle('responsive');
   }
   sidebarToggler.addEventListener('click', toggle);
 

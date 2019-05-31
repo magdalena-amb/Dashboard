@@ -68,7 +68,7 @@
 
 
 /* Components */
-@import "components/nav-fixed";
+@import "components/nav-fixed-left";
 @import "components/brand";
 @import "components/sidebar";
 @import "components/sidebar-link";
@@ -99,10 +99,11 @@ body {
   }
 }
 .grid-gap{
+  width: 20%;
   min-width: 200px;
 }
-//responsive images/tables
-.responsive {
+//responsive images/tables 
+.responsive {       // toggled @ #main when hiding sidebar
   width: 100%;
   height: auto;
 }
